@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif+Display:wght@500&family=Noto+Serif&display=swap");
+:root {
+  /* purple dim */
+  --purple-dim-900: hsla(216, 17%, 32%, 1);
+  --purple-dim-800: hsla(227, 16%, 40%, 1);
+  --purple-dim-700: hsla(242, 16%, 48%, 1);
+  --purple-dim-600: hsla(253, 19%, 56%, 1);
+  --purple-dim-500: hsla(266, 25%, 64%, 1);
+  --purple-dim-400: hsla(278, 27%, 71%, 1);
+  --purple-dim-300: hsla(292, 27%, 78%, 1);
+  --purple-dim-200: hsla(303, 29%, 86%, 1);
+  --purple-dim-100: hsla(316, 30%, 93%, 1);
+  /* purple bright */
+  --purple-bright-900: hsla(215, 22%, 31%, 1);
+  --purple-bright-800: hsla(229, 21%, 39%, 1);
+  --purple-bright-700: hsla(240, 20%, 46%, 1);
+  --purple-bright-600: hsla(254, 23%, 54%, 1);
+  --purple-bright-500: hsla(266, 30%, 62%, 1);
+  --purple-bright-400: hsla(278, 32%, 70%, 1);
+  --purple-bright-300: hsla(291, 33%, 77%, 1);
+  --purple-bright-200: hsla(304, 35%, 85%, 1);
+  --purple-bright-100: hsla(317, 37%, 93%, 1);
+
+  /* neutral */
+  --neutral-900: hsla(240, 9%, 11%, 1);
+  --neutral-800: hsla(247, 9%, 19%, 1);
+  --neutral-700: hsla(245, 8%, 28%, 1);
+  --neutral-600: hsla(240, 5%, 38%, 1);
+  --neutral-500: hsla(247, 4%, 47%, 1);
+  --neutral-400: hsla(240, 3%, 57%, 1);
+  --neutral-300: hsla(250, 4%, 67%, 1);
+  --neutral-200: hsla(240, 3%, 76%, 1);
+  --neutral-100: hsla(240, 3%, 86%, 1);
+  --neutral-50: hsla(0, 0%, 96%, 1);
+
+  /* pink */
+  --pink-900: hsla(330, 12%, 31%, 1);
+  --pink-800: hsla(330, 11%, 40%, 1);
+  --pink-700: hsla(331, 11%, 49%, 1);
+  --pink-600: hsla(330, 20%, 67%, 1);
+  --pink-500: hsla(331, 31%, 76%, 1);
+  --pink-400: hsla(332, 14%, 58%, 1);
+  --pink-300: hsla(331, 33%, 83%, 1);
+  --pink-200: hsla(330, 36%, 89%, 1);
+  --pink-100: hsla(330, 33%, 95%, 1);
+
+  /* beige */
+  --beige-900: hsla(279, 8%, 35%, 1);
+  --beige-800: hsla(293, 7%, 44%, 1);
+  --beige-700: hsla(311, 7%, 53%, 1);
+  --beige-600: hsla(327, 9%, 62%, 1);
+  --beige-500: hsla(341, 13%, 71%, 1);
+  --beige-400: hsla(357, 17%, 80%, 1);
+  --beige-300: hsla(11, 29%, 88%, 1);
+  --beige-200: hsla(11, 31%, 93%, 1);
+  --beige-100: hsla(15, 33%, 98%, 1);
+
+  /* color themes */
+  --primary: var(--purple-bright-500);
+  --background: var(--neutral-800);
+  --headings: var(--neutral-100);
+  --paragraph: var(--neutral-100);
+  --icon: var(--neutral-100);
+  --button: var(--neutral-100);
+  --link: var(--purple-dim-500);
+  --link-hover: var(--pink-500);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Serif", serif;
+  font-family: "Noto Serif Display", serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-color: var(--background);
+}
+div > svg {
+  width: 100%;
+  height: 100%;
+}
+div > img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+ul > li {
+  list-style-type: none;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+section {
+  padding: 72px 0;
+}
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  color: var(--icon);
+}
+.icon-button:hover svg,
+a:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+h2 {
+  text-align: center;
+  font-family: "Noto Serif Display";
+  font-weight: 400;
+  font-size: 48px;
+  color: var(--headings);
+}
+p {
+  font-family: "Noto Sans";
+  color: var(--paragraph);
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+nav .logo {
+  width: 40px;
+  height: 40px;
+}
+.menu-button {
+  position: relative;
+  z-index: 20;
+}
+
+.menu > .menu-button #line1 {
+  transform-origin: 12px 6px;
+}
+.menu.active > .menu-button #line1 {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu > .menu-button #line2 {
+  transform-origin: 12px 12px;
+}
+.menu.active > .menu-button #line2 {
+  transform: translateY(0) scaleX(0);
+}
+.menu > .menu-button #line3 {
+  transform-origin: 12px 18px;
+}
+.menu.active > .menu-button #line3 {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.menu.active > .menu-button line {
+  transition: transform 0.3s;
+}
+.menu > .menu-button line {
+  transition: transform 0.3s;
+}
+.menu > .menu-panel {
+  display: none;
+  padding: 32px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: var(--purple-dim-900);
+  /* opacity: 0.5; */
+}
+.menu.active > .menu-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-panel li a {
+  display: block;
+  padding: 24px 16px;
+  font-size: 48px;
+  text-align: center;
+}
+.menu-panel li:last-child a::before {
+  content: "Download ";
+  text-align: center;
+}
+
+.section-home {
+  /* min-height: calc(100vh - 88px); */
+}
+
+.main-visual {
+  width: 100%;
+  aspect-ratio: 464 / 600;
+  margin-top: 2vh;
+  position: relative;
+}
+.main-visual > svg {
+  position: absolute;
+}
+/* #arch {
+  mix-blend-mode: multiply;
+} */
+/* #noise {
+  height: 100%;
+  width: 100%;
+  filter: contrast(100%) brightness(1000%);
+  background: linear-gradient(to top, blue, transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg) !important;
+  position: absolute;
+} */
+.header-subhead {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 3;
+}
+.header-subhead p {
+  width: 50%;
+  font-family: "Noto Serif", serif;
+}
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  right: -16px;
+  transform: translateY(-25%);
+  z-index: 2;
+  font-size: 12vw;
+}
+.header-intro {
+  margin-top: 24px;
+  font-size: 18px;
+  font-family: "Noto Sans";
+  color: var(--paragraph);
+  text-align: center;
+  line-height: 1.75;
+}
+
+.work {
+  width: 100%;
+  min-height: 100vw;
+  margin-bottom: 40px;
+  position: relative;
+}
+.work-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10000px;
+  position: absolute;
+  overflow: hidden;
+}
+.work-thumbnail img {
+  width: auto;
+  height: 100%;
+}
+.work-thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(177, 78, 94, 0.41) 0%,
+    rgba(32, 20, 52, 0.92) 100%
+  );
+}
+.work-detail {
+  padding: 24px;
+  position: absolute;
+  bottom: 24px;
+}
+.work-title {
+  color: var(--headings);
+  font-size: 24px;
+  font-weight: 300;
+  padding: 16px 0;
+}
+.work-desc {
+  color: var(--paragraph);
+  font-family: "Noto Sans";
+  font-size: 18px;
+  line-height: 1.5;
+}
+/* >>>>>>>>> Contact <<<<<<<<< */
+.section-contact {
+  /* min-height: 100vh; */
+}
+.get-in-touch-content {
+  padding-top: 32px;
+}
+.get-in-touch-content .greeting,
+.email span {
+  display: none;
+}
+.social-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.social-button {
+  display: block;
+}
+.resume::before {
+  content: url("./assets/imgs/ampersand.svg");
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 32px auto;
+}
+.resume-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid var(--button);
+  border-radius: 1000px;
+  background-color: transparent;
+  color: var(--button);
+  font-family: "Noto Serif", serif;
+  font-size: 20px;
+}
+
+/* >>>>>>>>> Footer <<<<<<<<< */
+footer {
+  padding: 16px;
+}
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    font-size: 72px;
+  }
+  p {
+    text-shadow: 0px 1px 32px var(--neutral-900);
+  }
+  .container {
+    width: 80%;
+  }
+  nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+  .menu .menu-button {
+    display: none;
+  }
+  .menu .menu-panel {
+    display: flex;
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+  }
+
+  .menu-panel li a {
+    padding: 12px 20px;
+    margin-left: 8px;
+    font-family: "Noto Serif";
+    font-size: 20px;
+    color: var(--button);
+  }
+  .menu-panel li:first-child {
+    display: none;
+  }
+  .menu-panel li:last-child a {
+    border-radius: 4px;
+    border: var(--button) 1px solid;
+  }
+  .menu-panel li:last-child a::before {
+    content: "";
+  }
+
+  .section-home {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .section-home .container {
+    display: flex;
+  }
+  .col {
+    flex: 1 0 100px;
+    position: relative;
+  }
+
+  .main-visual {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .main-visual .header-title {
+    left: -100px;
+    right: -100px;
+    font-size: 80px;
+  }
+  .header-intro {
+    max-width: 100%;
+    min-width: 250px;
+    margin-left: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+  }
+  .header-subhead {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .header-subhead p {
+    min-width: 200px;
+    width: 100%;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .header-subhead p:last-of-type {
+    transform: translateX(50%);
+  }
+
+  .works {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .work {
+    min-height: 30%;
+    width: 30%;
+  }
+  .work-thumbnail {
+    position: relative;
+  }
+  .section-contact {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  .section-contact .container {
+    display: flex;
+  }
+
+  .get-in-touch,
+  .resume {
+    flex: 1 0 0;
+  }
+  .get-in-touch h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .get-in-touch-content .greeting {
+    display: block;
+  }
+
+  .social-media-list {
+    justify-content: left;
+  }
+  .social-media-item.email {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .email .social-button {
+    display: flex;
+    gap: 16px;
+    width: auto;
+  }
+  .email span {
+    display: block;
+    font-family: "Noto Serif", serif;
+  }
+  .resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .resume::before {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .resume h2 {
+    text-align: right;
+  }
+  .resume h2::before {
+    content: "checkout";
+    position: absolute;
+    font-size: 24px;
+    font-family: "Noto Serif";
+    transform: translateY(-100%);
+  }
+  .resume-content {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .main-visual .header-title {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 56px;
+  }
+  .col {
+    flex-basis: 0;
+  }
+
+  .work {
+    width: 100%;
+  }
+  .work-thumbnail {
+    width: 40%;
+    aspect-ratio: 3 / 4;
+  }
+  .work-detail {
+    bottom: 0;
+    left: 20%;
+  }
+  .work:nth-child(2) .work-thumbnail {
+    margin-left: auto;
+  }
+}
