@@ -215,6 +215,15 @@ nav .logo {
 .section-home {
   /* min-height: calc(100vh - 88px); */
 }
+.line {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .main-visual {
   width: 100%;
@@ -224,6 +233,30 @@ nav .logo {
 }
 .main-visual > svg {
   position: absolute;
+}
+#main-svg {
+  opacity: 0;
+}
+#loading-svg {
+  z-index: 101;
+}
+.loading-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--neutral-100);
+  z-index: 100;
+}
+#arch,
+#moon,
+#mount1,
+#mount2,
+#mount3 {
+  /* animation:draw 10s linear; */
+  stroke-dashoffset: 2000;
+  stroke-dasharray: 2000;
 }
 /* #arch {
   mix-blend-mode: multiply;

@@ -7,6 +7,7 @@
     <title>Vivian Y. Chen | Web Dev and Designer</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
   </head>
   <body>
     <h1>Vivian Y. Chen</h1>
@@ -47,6 +48,8 @@
     </nav>
 
     <header class="section-home" id="home">
+      <div class="loading-bg"></div>
+      <img class="line" src="./assets/Line.svg" alt="" />
       <div class="container">
         <div class="col">
           <div class="header-subhead">
@@ -56,8 +59,50 @@
         </div>
         <div class="main-visual">
           <h2 class="header-title">Vivian Y. Chen</h2>
-
           <svg
+            id="loading-svg"
+            width="464"
+            height="600"
+            viewBox="0 0 464 600"
+            preserveAspectRatio="xMidYMid meet"
+            fill="none"
+            stroke="hsla(216, 17%, 32%, 1)"
+            strokeWidth="1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M232 0C103.87 0 0 103.901 0 232.07V600H464V232.07C464 103.901 360.13 0 232 0Z"
+              id="arch"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M291.001 131.509C281.521 115.36 263.946 104.514 243.83 104.514C213.663 104.514 189.208 128.908 189.208 159C189.208 189.092 213.663 213.487 243.83 213.487C263.944 213.487 281.519 202.642 290.999 186.495C280.762 207.512 259.156 222 234.157 222C199.277 222 171 193.794 171 159C171 124.206 199.277 96 234.157 96C259.158 96 280.765 110.49 291.001 131.509Z"
+            />
+            <g>
+              <path id="mount3" d="M315 278L515.918 625.25H114.082L315 278Z" />
+              <path id="mount2" d="M394 309L580.195 631.5H207.805L394 309Z" />
+              <path
+                id="mount1"
+                d="M87.5 354L238.621 615.75H-63.6214L87.5 354Z"
+              />
+            </g>
+            <defs>
+              <linearGradient
+                id="archbg"
+                x1="232"
+                y1="0"
+                x2="232"
+                y2="600"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#54506B" />
+                <stop offset="1" stop-color="#F1D8DE" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <svg
+            id="main-svg"
             width="464"
             height="600"
             viewBox="0 0 464 600"
@@ -65,25 +110,11 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <filter id="noiseFilter">
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.84"
-                numOctaves="1"
-                stitchTiles="stitch"
-              />
-            </filter>
             <path
               d="M232 0C103.87 0 0 103.901 0 232.07V600H464V232.07C464 103.901 360.13 0 232 0Z"
               id="arch"
               fill="url(#archbg)"
             />
-            <!-- <path
-              d="M232 0C103.87 0 0 103.901 0 232.07V600H464V232.07C464 103.901 360.13 0 232 0Z"
-              id="noise"
-              filter="url(#noiseFilter)"
-            /> -->
-
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -121,7 +152,6 @@
               </linearGradient>
             </defs>
           </svg>
-          <!-- <div id="noise"></div> -->
         </div>
         <div class="col">
           <p class="header-intro">
