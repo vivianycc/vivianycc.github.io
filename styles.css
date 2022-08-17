@@ -239,7 +239,7 @@ nav .logo {
 }
 #loading-svg,
 .loading-bg {
-  display: none;
+  /* display: none; */
 }
 #loading-svg {
   z-index: 101;

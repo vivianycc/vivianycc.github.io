@@ -83,3 +83,4 @@ const contactTl = gsap
   });
 
 master.add(preTl());
+master.add(homeTl());
