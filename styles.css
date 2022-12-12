@@ -37,9 +37,9 @@
   --pink-900: hsla(330, 12%, 31%, 1);
   --pink-800: hsla(330, 11%, 40%, 1);
   --pink-700: hsla(331, 11%, 49%, 1);
-  --pink-600: hsla(330, 20%, 67%, 1);
-  --pink-500: hsla(331, 31%, 76%, 1);
-  --pink-400: hsla(332, 14%, 58%, 1);
+  --pink-600: hsla(332, 14%, 58%, 1);
+  --pink-500: hsla(330, 20%, 67%, 1);
+  --pink-400: hsla(331, 31%, 76%, 1);
   --pink-300: hsla(331, 33%, 83%, 1);
   --pink-200: hsla(330, 36%, 89%, 1);
   --pink-100: hsla(330, 33%, 95%, 1);
@@ -185,10 +185,10 @@ nav .logo {
 }
 .menu > .menu-panel {
   display: none;
+  height: 100vh;
   padding: 32px;
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
@@ -319,6 +319,7 @@ nav .logo {
 .work-thumbnail img {
   width: auto;
   height: 100%;
+  max-height: 600px;
 }
 .work-thumbnail::after {
   content: "";
@@ -337,6 +338,21 @@ nav .logo {
   padding: 24px;
   position: absolute;
   bottom: 24px;
+}
+.work-detail a {
+  margin-top: 16px;
+  text-decoration: underline;
+  text-transform: lowercase;
+  color: var(--pink-500);
+  text-underline-offset: 4px;
+  font-family: "Noto Serif";
+  font-size: 18px;
+}
+.work-detail a:hover {
+  color: var(--pink-400);
+}
+.work-detail a::after {
+  content: " ⟶";
 }
 .work-title {
   color: var(--headings);
