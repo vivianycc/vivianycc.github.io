@@ -207,6 +207,12 @@ nav .logo {
   font-size: 48px;
   text-align: center;
 }
+.menu-panel li a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .menu-panel li:last-child a::before {
   content: "Download ";
   text-align: center;
@@ -237,10 +243,11 @@ nav .logo {
 #main-svg {
   opacity: 0;
 }
-#loading-svg,
+/*#loading-svg,
 .loading-bg {
-  /* display: none; */
+   display: none; 
 }
+*/
 #loading-svg {
   z-index: 101;
 }
@@ -277,10 +284,15 @@ nav .logo {
   display: flex;
   flex-wrap: wrap;
   z-index: 3;
+  position: relative;
 }
 .header-subhead p {
   width: 50%;
   font-family: "Noto Serif", serif;
+}
+
+.header-subhead p:last-of-type {
+  transform: translateY(100%);
 }
 .header-title {
   position: absolute;
@@ -315,6 +327,7 @@ nav .logo {
   border-radius: 10000px;
   position: absolute;
   overflow: hidden;
+  box-shadow: inset 5em 1em gold;
 }
 .work-thumbnail img {
   width: auto;
@@ -330,8 +343,8 @@ nav .logo {
   right: 0;
   background: linear-gradient(
     180deg,
-    rgba(177, 78, 94, 0.41) 0%,
-    rgba(32, 20, 52, 0.92) 100%
+    rgba(105, 48, 58, 0.5) 0%,
+    rgba(22, 13, 36, 1) 100%
   );
 }
 .work-detail {
@@ -340,7 +353,6 @@ nav .logo {
   bottom: 24px;
 }
 .work-detail a {
-  margin-top: 16px;
   text-decoration: underline;
   text-transform: lowercase;
   color: var(--pink-500);
@@ -355,12 +367,14 @@ nav .logo {
   content: " ⟶";
 }
 .work-title {
+  padding: 16px 0;
   color: var(--headings);
   font-size: 24px;
   font-weight: 300;
-  padding: 16px 0;
+  text-shadow: 1px 1px 2px var(--purple-dim-900);
 }
 .work-desc {
+  margin-bottom: 16px;
   color: var(--paragraph);
   font-family: "Noto Sans";
   font-size: 18px;
@@ -461,6 +475,13 @@ footer p {
     border-radius: 4px;
     border: var(--button) 1px solid;
   }
+
+  .menu-panel li:last-child a:hover {
+    text-decoration: none;
+    background-color: var(--link-hover);
+    border: var(--link-hover) 1px solid;
+    color: var(--background);
+  }
   .menu-panel li:last-child a::before {
     content: "";
   }
@@ -508,6 +529,7 @@ footer p {
     margin-bottom: 24px;
     font-size: 24px;
   }
+
   .header-subhead p:last-of-type {
     transform: translateX(50%);
   }
