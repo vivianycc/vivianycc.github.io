@@ -409,6 +409,7 @@ nav .logo {
   color: var(--button);
   font-family: "Noto Serif", serif;
   font-size: 20px;
+  z-index: 10;
 }
 
 /* >>>>>>>>> Footer <<<<<<<<< */
@@ -440,6 +441,7 @@ footer p {
   }
   .menu .menu-panel {
     display: flex;
+    height: auto;
     padding: 0;
     position: relative;
     background-color: transparent;
